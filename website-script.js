@@ -8,9 +8,9 @@ $(document).ready(function(){
 		autoplaySpeed: 2500,
 
 		centerMode: true,
-		centerPadding: '60px',
-
-		infinite: false,
+		centerPadding: '30px',
+		
+		infinite: true,
 		speed: 300,
 		slidesToShow: 4,
 		slidesToScroll: 4,
@@ -20,18 +20,17 @@ $(document).ready(function(){
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 3,
-					infinite: true
 				}
 			},
 			
 			{
-				breakpoint: 600,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
 					
-					centerMode: true,
-                                       	centerPadding: '40px'
+					vertical: false,
+					verticalSwiping: false
 				}
 			},
     		
@@ -40,9 +39,9 @@ $(document).ready(function(){
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					
-					centerMode: true,
-                                        centerPadding: '40px'
+				
+					vertical: false,
+                                        verticalSwiping: false
 				}
 			}
 		]
