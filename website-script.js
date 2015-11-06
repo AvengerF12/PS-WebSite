@@ -5,7 +5,10 @@ $(document).ready(function(){
 		verticalSwiping: true,
 
 		autoplay: true,
-        autoplaySpeed: 2500,
+		autoplaySpeed: 2500,
+
+		centerMode: true,
+		centerPadding: '60px',
 
 		infinite: false,
 		speed: 300,
@@ -17,7 +20,7 @@ $(document).ready(function(){
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 3,
-					infinite: true,
+					infinite: true
 				}
 			},
 			
@@ -25,7 +28,10 @@ $(document).ready(function(){
 				breakpoint: 600,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 2
+					slidesToScroll: 2,
+					
+					centerMode: true,
+                                       	centerPadding: '40px'
 				}
 			},
     		
@@ -33,30 +39,13 @@ $(document).ready(function(){
 				breakpoint: 480,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1
+					slidesToScroll: 1,
+					
+					centerMode: true,
+                                        centerPadding: '40px'
 				}
 			}
 		]
 	});
 
-	$('.center').slick({
-		centerMode: true,
-		centerPadding: '60px',
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					centerMode: true,
-					centerPadding: '40px'
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					centerMode: true,
-					centerPadding: '40px'
-				}
-			}
-		]
-	});
 });
