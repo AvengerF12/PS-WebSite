@@ -6,10 +6,9 @@ $(document).ready(function(){
 
 		autoplay: true,
 		autoplaySpeed: 2500,
-
-		centerMode: true,
-		centerPadding: '30px',
-		
+	
+		focusOnSelect: true,
+	
 		infinite: true,
 		speed: 300,
 		slidesToShow: 4,
