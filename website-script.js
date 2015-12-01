@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    $('.h-snippet').hide();
+
 	$('.responsive-news').slick({
 		vertical: true,
 		verticalSwiping: true,
@@ -48,3 +50,19 @@ $(document).ready(function(){
 	});
 
 });
+
+
+function showNews()
+{
+    var activatedCounter = 0;
+
+    for(var i=0;i<9 && activatedCounter<3;i++){
+        console.log(document.getElementById("snippet5").style.display);
+        if(document.getElementById("snippet"+i).style.display == "none"){
+            document.getElementById("snippet"+i).style.display = "inline";
+            activatedCounter++;
+        }
+    }
+}
+
+

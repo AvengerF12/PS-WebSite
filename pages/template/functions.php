@@ -1,14 +1,14 @@
 <?php
 /*
  To do:
- * Create function for echoing news snippet on front page
 */
 
 
 ini_set("display_errors", 1);
 error_reporting(E_ALL);
 
-function readDB(){
+function readDB()
+{
 
     $username="sql1503473";
     $password="m6AZ4QM0TCbb";
@@ -27,7 +27,9 @@ function readDB(){
     return $result;
 }
 
-function echoSnippet($newsRank){
+
+function echoSnippet($newsRank)
+{
     
     $queryResult = readDB();
     $i = 0;
@@ -35,13 +37,35 @@ function echoSnippet($newsRank){
 
         if($i == $newsRank){
             $newsSnippet = substr($db_field['content'],0,200);
-            echo "<h4>" . $db_field['title'] . "</h4> <BR> <BR>";
-            echo $newsSnippet . "...<BR>";
+            echo "<h4>" . $db_field['title'] . "</h4> <BR>";
+            echo $newsSnippet . "...  ";
+            echo "<a href=\"#\">Read more</a>";
+            echo "<BR>";
 
             break;
         }
+
         $i++;
     }
 }
+
+
+function updateViewCountDB($idToUpdate)
+{
+    $username="sql1503473";
+    $password="m6AZ4QM0TCbb";
+    $database="lochnagar.abertay.ac.uk";
+    $conn=mysql_connect($database,$username,$password);
+     @mysql_select_db($username) or die( "Unable to select database");
+
+    $sql1 = "UPDATE websiteData SET viewCount=viewCount+1 WHERE id == $idToUpdate)";
+    $rs=mysql_query($sql1) or die("Unable to run query 1");
+
+    $sql2 = "SELECT id, title, viewCount FROM websiteData";
+    $result=mysql_query($sql2) or die("Unable to run query 2");
+
+    mysql_close();
+}
+
 ?>
 

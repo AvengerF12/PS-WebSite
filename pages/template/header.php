@@ -11,7 +11,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">
+                            <a class="navbar-brand" href="https://events.google.com/io2015/">
                                 <img src="images/navbar-logo.png" class="icon-img">
                             </a>
                         </div>

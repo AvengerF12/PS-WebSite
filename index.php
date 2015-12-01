@@ -37,25 +37,70 @@
 
 				    <article class="col-sm-8">
 					
-					    <section class="row news">
+					    <section id="snippet0" class="row news">
                         <p>
                             <?php echoSnippet(0);?>
                         </p>
 					    </section>
 
-					    <section class="row news">
+					    <section id="snippet1" class="row news">
                         <p>
                             <?php echoSnippet(1);?>
                         </p>
 					    </section>
 
-					    <section class="row news">
-                            <p>
-                                <?php echoSnippet(2);?>
-                            </p>
+					    <section id="snippet2" class="row news">
+                        <p>
+                            <?php echoSnippet(2);?>
+                        </p>
 					    </section>
-					
-					    <button type="button" class="btn btn-default btn-block" onClick="retrieveNews()"> Load more news</button>
+
+					    <section id="snippet3" class="row news h-snippet">
+                        <p>
+                            <?php echoSnippet(3);?>
+                        </p>
+					    </section>
+
+                        <section id="snippet4" class="row news h-snippet">
+                        <p>
+                            <?php echoSnippet(4);?>
+                        </p>
+					    </section>
+
+                        <section id="snippet5" class="row news h-snippet">
+                        <p>
+                            <?php echoSnippet(5);?>
+                        </p>
+					    </section>
+
+                        <section id="snippet6" class="row news h-snippet">
+                        <p>
+                            <?php echoSnippet(6);?>
+                        </p>
+					    </section>
+
+                        <section id="snippet7" class="row news h-snippet">
+                        <p>
+                            <?php echoSnippet(7);?>
+                        </p>
+					    </section>
+
+                        <section id="snippet8" class="row news h-snippet">
+                        <p>
+                            <?php echoSnippet(8);?>
+                        </p>
+					    </section>
+
+                        <section id="snippet9" class="row news h-snippet">
+                        <p>
+                            <?php echoSnippet(9);?>
+                        </p>
+					    </section>
+
+
+                        <button type="button" class="btn btn-default btn-block" onClick="showNews()">
+                            Load more news
+                        </button>
 
 				    </article>
 				
