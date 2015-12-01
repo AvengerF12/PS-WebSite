@@ -22,6 +22,8 @@
 
 		<link rel="stylesheet" type="text/css" href="website-style.css"/>
 
+        <?php require_once "pages/template/functions.php"?>
+
 	</head>
 	
 	<body>
@@ -36,15 +38,21 @@
 				    <article class="col-sm-8">
 					
 					    <section class="row news">
-                            <?php @ require_once ("pages/news/1.html"); ?>
+                        <p>
+                            <?php echoSnippet(0);?>
+                        </p>
 					    </section>
 
 					    <section class="row news">
-                            <p>Story n2</p>
+                        <p>
+                            <?php echoSnippet(1);?>
+                        </p>
 					    </section>
 
 					    <section class="row news">
-                            <p>Story n3</p>
+                            <p>
+                                <?php echoSnippet(2);?>
+                            </p>
 					    </section>
 					
 					    <button type="button" class="btn btn-default btn-block" onClick="retrieveNews()"> Load more news</button>
@@ -54,7 +62,10 @@
 				    <aside class="col-sm-4 responsive-news">
 					    <!--Placeholder for the slick carousel inserted by the script-->
 					
-					    <div><h3>1</h3></div>
+                        <div>
+                            <iframe width="200" height="90" src="https://www.youtube.com/embed/7V-fIGMDsmE" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
 					    <div><h3>2</h3></div>
 					    <div><h3>3</h3></div>
 					    <div><h3>4</h3></div>
