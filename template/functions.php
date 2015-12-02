@@ -39,8 +39,11 @@ function echoSnippet($newsRank)
             $newsSnippet = substr($db_field['content'],0,200);
             echo "<h4>" . $db_field['title'] . "</h4> <BR>";
             echo $newsSnippet . "...  ";
-            echo "<a href=\"news.php?idNews=". $db_field['id'] ."\">Read more</a>";
-            echo "<BR>";
+
+            // Insert url for the current news
+            echo '<p class="text-right">';
+            echo '<a href="news.php?idNews=' . $db_field['id'] . '">Read more</a>';
+            echo '</p>';
 
             break;
         }
@@ -61,6 +64,11 @@ function echoNews($idNews)
             echo "<h4>" . $db_field['title'] . "</h4> <BR>";
             echo $db_field['content'];
             echo "<BR>";
+            
+            // Insert source's url in the news page
+            echo '<p class="text-right">';
+            echo '<a href="'. $db_field['url'] .'">Via</a>';
+            echo '</p>';
 
             break;
         }

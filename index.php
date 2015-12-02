@@ -39,6 +39,8 @@
 			    <div class="row">
 
 				    <article class="col-sm-8">
+                        
+                        <h3 class="text-center">Top News</h3>
 					
 					    <section id="snippet0" class="row news">
                         <p>
