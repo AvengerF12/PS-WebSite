@@ -1,7 +1,10 @@
 <?php
 	echo '
-	<header>
-		<img src="images/banner-google.png" class="img-responsive">	
+    <header>
+
+        <a href="index.php">
+		    <img src="images/banner-google.png" class="img-responsive">	
+        </a>
 
 		<nav class="navbar navbar-default">
                 <div class="container-fluid">

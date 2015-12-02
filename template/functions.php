@@ -17,7 +17,7 @@ function readDB()
     mysql_connect($database,$username,$password);
     @mysql_select_db($username) or die( "Unable to select database");
 
-    $sql = "SELECT id, title, url, content, viewCount FROM websiteData ORDER BY viewCount DESC";
+    $sql = "SELECT id, title, url, content, image, viewCount FROM websiteData ORDER BY viewCount DESC";
     $result=mysql_query($sql);
 
     $num=mysql_numrows($result);
@@ -62,9 +62,14 @@ function echoNews($idNews)
 
         if($db_field['id'] == $idNews){
             echo "<h4>" . $db_field['title'] . "</h4> <BR>";
+
+            echo '<p class="text-right">';
+            echo '<img src="' . $db_field['image'] . '" class="img-responsive">';
+            echo '</p>';
+
             echo $db_field['content'];
             echo "<BR>";
-            
+
             // Insert source's url in the news page
             echo '<p class="text-right">';
             echo '<a href="'. $db_field['url'] .'">Via</a>';
