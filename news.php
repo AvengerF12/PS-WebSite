@@ -27,6 +27,11 @@
 
         <?php require_once "template/functions.php"?>
 
+        <?php
+            // Increment the visit count for this news page
+            updateViewCountDB($_GET["idNews"]);
+        ?>
+
 	</head>
 	
 	<body>

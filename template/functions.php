@@ -77,11 +77,10 @@ function updateViewCountDB($idToUpdate)
     $conn=mysql_connect($database,$username,$password);
      @mysql_select_db($username) or die( "Unable to select database");
 
-    $sql1 = "UPDATE websiteData SET viewCount=viewCount+1 WHERE id == $idToUpdate)";
-    $rs=mysql_query($sql1) or die("Unable to run query 1");
-
-    $sql2 = "SELECT id, title, viewCount FROM websiteData";
-    $result=mysql_query($sql2) or die("Unable to run query 2");
+    $sql1 = "UPDATE websiteData
+                SET viewCount=viewCount+1
+                WHERE id = $idToUpdate";
+    $rs=mysql_query($sql1) or die("Unable to run query");
 
     mysql_close();
 }
