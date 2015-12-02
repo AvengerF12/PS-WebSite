@@ -2,10 +2,13 @@
 <html>
 
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Google I/O 2015</title>
+
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -22,13 +25,13 @@
 
 		<link rel="stylesheet" type="text/css" href="website-style.css"/>
 
-        <?php require_once "pages/template/functions.php"?>
+        <?php require_once "template/functions.php"?>
 
 	</head>
 	
 	<body>
         <div class="h-container">	
-		    <?php require 'pages/template/header.php';?>
+		    <?php require 'template/header.php';?>
 		
 
 		    <div class="container-fluid">
@@ -98,9 +101,11 @@
 					    </section>
 
 
-                        <button type="button" class="btn btn-default btn-block" onClick="showNews()">
+                        <button type="button" id="load-btn" class="btn btn-default btn-block" onClick="showNews()">
                             Load more news
                         </button>
+                        
+                        <BR>
 
 				    </article>
 				
@@ -122,10 +127,9 @@
 
 				    </aside>
 
-
 			    </div>
 
-                <?php require 'pages/template/footer.php';?>
+                <?php require 'template/footer.php';?>
 		
 	    	</div>
         </div>

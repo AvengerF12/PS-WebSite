@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+    // Hide the uneneed news
     $('.h-snippet').hide();
 
 	$('.responsive-news').slick({
@@ -52,17 +53,22 @@ $(document).ready(function(){
 });
 
 
+// Load 3 news at a time
 function showNews()
 {
     var activatedCounter = 0;
+    var i=0;
 
-    for(var i=0;i<9 && activatedCounter<3;i++){
-        console.log(document.getElementById("snippet5").style.display);
+    for(i=0;i<9 && activatedCounter<3;i++){
         if(document.getElementById("snippet"+i).style.display == "none"){
-            document.getElementById("snippet"+i).style.display = "inline";
+            document.getElementById("snippet"+i).style.display = "block";
             activatedCounter++;
         }
     }
-}
 
+    // Hide button if finished loading news
+    if(activatedCounter == 3 && i==9){
+        document.getElementById("load-btn").style.display = "none";
+    }
+}
 
