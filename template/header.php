@@ -30,8 +30,8 @@
                                         <li><a href="#">Page 1-3</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Tutor page</a></li>
+                                <li><a href="about.php">About</a></li>
+                                <li><a href="tutor.php">Tutor page</a></li>
                             </ul>
                         </div>
                 </div>
