@@ -25,66 +25,7 @@
                         
                         <h3 class="text-center">Recent news</h3>
 					
-					    <section id="snippet0" class="row news">
-                        <p>
-                            <?php echoSnippet(0);?>
-                        </p>
-					    </section>
-
-					    <section id="snippet1" class="row news">
-                        <p>
-                            <?php echoSnippet(1);?>
-                        </p>
-					    </section>
-
-					    <section id="snippet2" class="row news">
-                        <p>
-                            <?php echoSnippet(2);?>
-                        </p>
-					    </section>
-
-					    <section id="snippet3" class="row news h-snippet">
-                        <p>
-                            <?php echoSnippet(3);?>
-                        </p>
-					    </section>
-
-                        <section id="snippet4" class="row news h-snippet">
-                        <p>
-                            <?php echoSnippet(4);?>
-                        </p>
-					    </section>
-
-                        <section id="snippet5" class="row news h-snippet">
-                        <p>
-                            <?php echoSnippet(5);?>
-                        </p>
-					    </section>
-
-                        <section id="snippet6" class="row news h-snippet">
-                        <p>
-                            <?php echoSnippet(6);?>
-                        </p>
-					    </section>
-
-                        <section id="snippet7" class="row news h-snippet">
-                        <p>
-                            <?php echoSnippet(7);?>
-                        </p>
-					    </section>
-
-                        <section id="snippet8" class="row news h-snippet">
-                        <p>
-                            <?php echoSnippet(8);?>
-                        </p>
-					    </section>
-
-                        <section id="snippet9" class="row news h-snippet">
-                        <p>
-                            <?php echoSnippet(9);?>
-                        </p>
-					    </section>
-
+                        <?php echoCronologicalList(9);?>
 
                         <button type="button" id="load-btn" class="btn btn-default btn-block" onClick="showNews()">
                             Load more news

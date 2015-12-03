@@ -27,8 +27,8 @@ function readDB($query)
 }
 
 
-// Outputs news in cronological order
-function echoSnippet($newsOrder)
+// Outputs news in the order in which they were added
+function echoCronologicalSnippet($newsOrder)
 {
     $sql = "SELECT id, title, url, content, image, viewCount FROM websiteData";
 
@@ -41,16 +41,37 @@ function echoSnippet($newsOrder)
             echo "<h4>" . $db_field['title'] . "</h4> <BR>";
             echo $newsSnippet . "...  ";
 
+            echo '<BR>';
+
             // Insert url for the current news
+            echo '<a href="news.php?idNews=' . $db_field['id'] . '">';
             echo '<p class="text-right">';
-            echo '<a href="news.php?idNews=' . $db_field['id'] . '">Read more</a>';
+            echo 'Click to read more';
             echo '</p>';
+            echo '</a>';
 
             break;
         }
 
         $i++;
     }
+}
+
+
+function echoCronologicalList($nItems)
+{
+    for($i=0;$i<$nItems;$i++){
+            if($i<3){
+                echo '<section id="snippet'.$i.'" class="row news">';
+            } else {
+                echo '<section id="snippet'.$i.'" class="row news h-snippet">';
+            }
+            echo '<p>';
+            echoCronologicalSnippet($i);
+            echo '</p>';
+            echo '</section>';
+    }
+
 }
 
 
