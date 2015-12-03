@@ -8,6 +8,7 @@ $(document).ready(function(){
 		vertical: true,
 		verticalSwiping: true,
 
+        adaptiveHeight: true,
         infinite: true,
 		arrows: false,
 		speed: 300,

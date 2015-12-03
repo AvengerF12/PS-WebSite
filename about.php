@@ -55,7 +55,7 @@
                     </p>
 
                     <p class="text-right">
-                        -Google
+                        - Google
                     </p>
 
                 </div>
