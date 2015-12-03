@@ -8,12 +8,15 @@ $(document).ready(function(){
 		vertical: true,
 		verticalSwiping: true,
 
+        autoplay: true,
+        autoplaySpeed: 5000,
+
         adaptiveHeight: true,
         infinite: false,
 		arrows: false,
 		speed: 300,
 		slidesToShow: 4,
-		slidesToScroll: 2,
+		slidesToScroll: 1,
 		responsive: [
 			{
 				breakpoint: 1024,
