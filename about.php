@@ -60,7 +60,7 @@
 
                 </div>
                 
-                <?php addBreaks(7);?>
+                <BR><BR><BR><BR><BR><BR><BR>
 
                 <?php require 'template/footer.php';?>
 	    	</article>

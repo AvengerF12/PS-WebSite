@@ -6,5 +6,8 @@
                     </h4>
                     
                     <img src="images/valid-html5.png" class="center">
+
+                    <BR>
+                    <BR>
           </footer>
 '?>
