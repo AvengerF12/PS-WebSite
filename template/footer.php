@@ -1,17 +1,10 @@
 <?php		
 	echo '<footer class="row">
 
-                    <div class="col-sm-4">
-                        <h4>Information<h3/>
-                    </div>
-
-                    <div class="col-sm-4"> 
-                        <h4>About<h3/>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <h4>Terms and conditions</h3>
-                    </div>
-
+                    <h4 class="text-center">
+                        Copyrights © 2015 Google I/O Newsfeed
+                    </h4>
+                    
+                    <img src="images/valid-html5.png" class="center">
           </footer>
 '?>

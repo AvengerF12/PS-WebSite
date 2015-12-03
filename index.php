@@ -18,6 +18,7 @@
 
 		    <div class="container-fluid">
 			
+                <!--Row class needed in order to keep white background-->
 			    <div class="row">
 
 				    <article class="col-sm-8">
