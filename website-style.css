@@ -1,11 +1,18 @@
 footer {
 	background-color: #e3e3e3;
 	text-align: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
 body {
     background-image: url("images/background-img.jpg");
+}
+
+
+div,p,h2,h3,h4,li {
+    font-family: 'Roboto', sans-serif;
 }
 
 
