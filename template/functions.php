@@ -65,7 +65,7 @@ function echoMostReadSnippet($newsRank)
         if($i == $newsRank){
             echo '<a href="news.php?idNews='. $db_field['id'] .'">';
                 echo '<h4 class="text-center">' . $db_field['title'] . '</h4> <BR>';
-                echo '<img src="'. $db_field['image'] .'" class="img-responsive aside-img">';
+                echo '<img src="'. $db_field['image'] .'" class="img-responsive aside-img center">';
             echo '</a>';
 
             break;
@@ -97,7 +97,7 @@ function echoNews($idNews)
         if($db_field['id'] == $idNews){
             echo '<h4 class="text-center">' . $db_field['title'] . '</h4> <BR>';
 
-            echo '<img src="' . $db_field['image'] . '" class="img-responsive">';
+            echo '<img src="' . $db_field['image'] . '" class="img-responsive center">';
 
             echo "<BR>";
             echo '<p>';
