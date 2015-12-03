@@ -7,7 +7,7 @@
 ini_set("display_errors", 1);
 error_reporting(E_ALL);
 
-function readDB()
+function readDB($query)
 {
 
     $username="sql1503473";
@@ -17,8 +17,7 @@ function readDB()
     mysql_connect($database,$username,$password);
     @mysql_select_db($username) or die( "Unable to select database");
 
-    $sql = "SELECT id, title, url, content, image, viewCount FROM websiteData ORDER BY viewCount DESC";
-    $result=mysql_query($sql);
+    $result=mysql_query($query);
 
     $num=mysql_numrows($result);
 
@@ -28,14 +27,16 @@ function readDB()
 }
 
 
-function echoSnippet($newsRank)
+// Outputs news in cronological order
+function echoSnippet($newsOrder)
 {
-    
-    $queryResult = readDB();
+    $sql = "SELECT id, title, url, content, image, viewCount FROM websiteData";
+
+    $queryResult = readDB($sql);
     $i = 0;
     while ($db_field = mysql_fetch_assoc($queryResult)) {
 
-        if($i == $newsRank){
+        if($i == $newsOrder){
             $newsSnippet = substr($db_field['content'],0,200);
             echo "<h4>" . $db_field['title'] . "</h4> <BR>";
             echo $newsSnippet . "...  ";
@@ -53,21 +54,55 @@ function echoSnippet($newsRank)
 }
 
 
+function echoMostReadSnippet($newsRank)
+{
+    $sql = "SELECT id, title, url, content, image, viewCount FROM websiteData ORDER BY viewCount DESC";
+    
+    $queryResult = readDB($sql);
+    $i = 0;
+    while ($db_field = mysql_fetch_assoc($queryResult)) {
+
+        if($i == $newsRank){
+            echo '<a href="news.php?idNews='. $db_field['id'] .'">';
+                echo '<h4 class="text-center">' . $db_field['title'] . '</h4> <BR>';
+                echo '<img src="'. $db_field['image'] .'" class="img-responsive aside-img">';
+            echo '</a>';
+
+            break;
+        }
+
+        $i++;
+    }
+}
+
+
+function echoMostReadList($nItems)
+{
+    for($i=0;$i<$nItems;$i++){
+        echo '<div class="news">';
+        echoMostReadSnippet($i);
+        echo '</div>';
+    }
+}
+
+
 function echoNews($idNews)
 {
+    $sql = "SELECT id, title, url, content, image, viewCount FROM websiteData";
         
-    $queryResult = readDB();
+    $queryResult = readDB($sql);
 
     while ($db_field = mysql_fetch_assoc($queryResult)) {
 
         if($db_field['id'] == $idNews){
-            echo "<h4>" . $db_field['title'] . "</h4> <BR>";
+            echo '<h4 class="text-center">' . $db_field['title'] . '</h4> <BR>';
 
-            echo '<p class="text-right">';
             echo '<img src="' . $db_field['image'] . '" class="img-responsive">';
-            echo '</p>';
 
+            echo "<BR>";
+            echo '<p>';
             echo $db_field['content'];
+            echo '</p>';
             echo "<BR>";
 
             // Insert source's url in the news page

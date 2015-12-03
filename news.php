@@ -38,21 +38,14 @@
 
 				    </article>
 				
-				    <aside class="col-sm-4 responsive-news">
-					    <!--Placeholder for the slick carousel inserted by the script-->
-					
-                        <div>
-                            <iframe width="200" height="90" src="https://www.youtube.com/embed/7V-fIGMDsmE" frameborder="0" allowfullscreen></iframe>
-                        </div>
+				    <aside class="col-sm-4">
 
-					    <div><h3>2</h3></div>
-					    <div><h3>3</h3></div>
-					    <div><h3>4</h3></div>
-					    <div><h3>5</h3></div>
-					    <div><h3>6</h3></div>
-					    <div><h3>7</h3></div>
-					    <div><h3>8</h3></div>
-				    	<div><h3>9</h3></div>
+                        <h3 class="text-center">Most read news</h3>
+
+                        <!--Placeholder for the slick carousel inserted by the script-->
+                        <div class="responsive-news">
+                            <?php echoMostReadList(9); ?>
+                        </div>
 
 				    </aside>
 

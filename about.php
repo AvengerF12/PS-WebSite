@@ -15,7 +15,7 @@
         <div class="h-container">	
 		    <?php require 'template/header.php';?>
 
-		    <div class="container-fluid">
+		    <article class="container-fluid">
 
                 <div class="responsive-showcase">
 
@@ -47,20 +47,21 @@
 
                 </div>
 
-                <p class="text-center">
-                    "Google I/O is for developers - the creative coders who are building what's next.
-                    <BR>
-                    Each year, we explore the latest in tech, mobile & beyond."
-                </p>
+                <div class="news">
+                    <p class="text-center">
+                        "Google I/O is for developers - the creative coders who are building what's next.
+                        <BR>
+                        Each year, we explore the latest in tech, mobile & beyond."
+                    </p>
 
-                <p class="text-right">
-                    -Google
-                </p>
+                    <p class="text-right">
+                        -Google
+                    </p>
 
-                <BR>
+                </div>
 
                 <?php require 'template/footer.php';?>
-	    	</div>
+	    	</article>
         </div>
 
 	</body>

@@ -1,35 +1,31 @@
 $(document).ready(function(){
 
-    // Hide the uneneed news
+    // Hide the unneeded news
     $('.h-snippet').hide();
 
+    // Slick carousel
 	$('.responsive-news').slick({
 		vertical: true,
 		verticalSwiping: true,
 
-		autoplay: true,
-		autoplaySpeed: 2500,
-	
-		focusOnSelect: true,
-
+        infinite: true,
 		arrows: false,
-		infinite: true,
 		speed: 300,
-		slidesToShow: 8,
-		slidesToScroll: 4,
+		slidesToShow: 4,
+		slidesToScroll: 2,
 		responsive: [
 			{
 				breakpoint: 1024,
 				settings: {
-					slidesToShow: 5,
-					slidesToScroll: 2,
+					slidesToShow: 4,
+					slidesToScroll: 2
 				}
 			},
 			
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 3,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 					
 					vertical: false,
@@ -40,7 +36,7 @@ $(document).ready(function(){
 			{
 				breakpoint: 480,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 1,
 					slidesToScroll: 1,
 				
 					vertical: false,
@@ -53,6 +49,10 @@ $(document).ready(function(){
     $('.responsive-showcase').slick({
         infinite: true,
         arrows: false,
+
+        autoplay: true,
+        autoplaySpeed: 4000,
+
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
