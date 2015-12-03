@@ -59,6 +59,8 @@
                     </p>
 
                 </div>
+                
+                <?php addBreaks(7);?>
 
                 <?php require 'template/footer.php';?>
 	    	</article>

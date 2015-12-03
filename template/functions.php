@@ -133,5 +133,13 @@ function updateViewCountDB($idToUpdate)
     mysql_close();
 }
 
+
+function addBreaks($nBreaks)
+{
+    for($i=0;$i<$nBreaks;$i++){
+        echo '<BR>';
+    }
+}
+
 ?>
 
