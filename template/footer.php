@@ -6,8 +6,12 @@
                     </h4>
                     
                     <img src="images/valid-html5.png" class="center">
-
-                    <BR>
-                    <BR>
+                    
+                    <p class="text-center">
+                        All the articles and images used in this website are property of their respective
+                        owners. The source link in each article redirects to the owner\'s website. <BR>
+                        The website\'s logo and banner are owned by Google inc. <BR>
+                        Code for the website written by Antonello Dettori. <BR>
+                    </p>
           </footer>
 '?>

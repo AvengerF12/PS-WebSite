@@ -47,6 +47,8 @@
 
                 </div>
 
+                <BR><BR>
+
                 <div class="news">
                     <p class="text-center">
                         "Google I/O is for developers - the creative coders who are building what's next.
@@ -60,7 +62,7 @@
 
                 </div>
                 
-                <BR><BR><BR><BR><BR><BR><BR>
+                <BR><BR><BR><BR><BR>
 
                 <?php require 'template/footer.php';?>
 	    	</article>
