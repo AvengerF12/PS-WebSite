@@ -9,7 +9,7 @@ $(document).ready(function(){
 		verticalSwiping: true,
 
         adaptiveHeight: true,
-        infinite: true,
+        infinite: false,
 		arrows: false,
 		speed: 300,
 		slidesToShow: 4,
