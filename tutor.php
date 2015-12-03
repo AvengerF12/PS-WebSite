@@ -46,6 +46,7 @@
                         <p class="text-center">
                             I used jQuery to hide the news in excess right after the page was finished loading.
                             The .ready event is used to call the jQuery hide() effect, on all the news after the third one, right after the page is loaded.
+                            The ready event is also used to load the slick carousel plugin after the page is loaded.
                         </p>
  
                     <li>Use of php server side script(s) to enable:</li>
